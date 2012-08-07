@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane prefHeight="511.0" prefWidth="798.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml" fx:controller="com.mobinotes.controller.LessonController">
+  <tabs>
+    <Tab text="Lesson 1">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <Button layoutX="254.0" layoutY="217.0" mnemonicParsing="false" onAction="#handleLessonOneAction" text="Lesson One" />
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Lesson 2">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <Button layoutX="268.0" layoutY="241.0" mnemonicParsing="false" onAction="#handleLessonTwoAction" text="Lesson Two" />
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

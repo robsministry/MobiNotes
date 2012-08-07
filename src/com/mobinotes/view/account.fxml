@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane prefHeight="511.0" prefWidth="798.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml" fx:controller="com.mobinotes.controller.AccountController">
+  <tabs>
+    <Tab text="%key.login">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="401.0" prefWidth="705.0">
+          <children>
+            <Group id="Group" layoutX="374.0" layoutY="72.0">
+              <children>
+                <VBox prefHeight="201.0" prefWidth="171.0">
+                  <children>
+                    <Label text="%key.username">
+                      <VBox.margin>
+                        <Insets top="20.0" fx:id="x1" />
+                      </VBox.margin>
+                    </Label>
+                    <TextField prefWidth="200.0" promptText="%key.username" />
+                    <Label text="%key.password" VBox.margin="$x1" />
+                    <PasswordField prefWidth="200.0" promptText="%key.password" />
+                    <Button fx:id="loginButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="60.0" text="Login">
+                      <VBox.margin>
+                        <Insets top="20.0" fx:id="x2" />
+                      </VBox.margin>
+                    </Button>
+                  </children>
+                </VBox>
+              </children>
+            </Group>
+            <Group id="Group" layoutX="71.0" layoutY="102.0">
+              <children>
+    
+                <Label id="login_status" fx:id="loginStatus" prefWidth="60.0" />
+                <Label fx:id="usser" layoutY="17.0" prefWidth="62.0" />
+              </children>
+            </Group>
+          </children>
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="%key.details">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
