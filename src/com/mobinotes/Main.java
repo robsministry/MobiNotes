@@ -27,6 +27,16 @@ public class Main extends Application {
     public SingleInstanceService singleService;
     public SingleInstanceListener singleListener;
 
+    static {
+        try {
+            Class.forName("com.mobinotes.client.MobiNotesLocalClient");
+            Class.forName("com.mobinotes.client.MobiNotesRemoteClient");
+            Class.forName("com.mobinotes.model.Record");
+        } catch (ClassNotFoundException any) {
+            any.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) {
         Application.launch(Main.class, args);
     }
@@ -34,10 +44,8 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        setSingleInstance(stage);
-        
         Parent root = FXMLLoader.load(getClass().getResource(Config.VIEW_DIR + "mobinotes.fxml"),
-               ResourceBundle.getBundle(Config.BUNDLES_DIR, new Locale("pl")) );
+                ResourceBundle.getBundle(Config.BUNDLES_DIR, new Locale("pl")));
 
         stage.setScene(new Scene(root));
         stage.show();
@@ -72,6 +80,5 @@ public class Main extends Application {
             }
         });
     }
-
 }
 //</editor-fold>

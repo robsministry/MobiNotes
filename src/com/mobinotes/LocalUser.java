@@ -24,6 +24,7 @@ public class LocalUser extends User {
     private static LocalUser instance = new LocalUser();
   
     private LocalUser() {
+        
         System.out.println("Local User Singleton(): Initializing Instance");
         initialize();
     }
